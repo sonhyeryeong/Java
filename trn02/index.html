@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>혜령's 홈</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/jquery.mb.YTPlayer.min.css">
+    <link rel="stylesheet" href="./css/sma.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- link 순서 잘 지키기 리셋이 가장 위 -->
+</head>
+
+<body>
+    <div class="Wrap">
+        <header class="header">
+            <div class="top_banner">
+                <div class="container">
+                    <h2>JEWELLERY COLLECTION EVENT</h2>
+                    <p>
+                        모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다.
+                        <a href="#!">more</a>
+                    </p>
+                    <i class="xi-close"></i>
+                </div>
+
+            </div>
+            <div class="gnb">
+                <div class="container">
+                    <h1>
+                        <a href="/">
+                            <img src="./img/grafflogo.png" alt="혜령's 홈">
+                        </a>
+                    </h1>
+                    <nav>
+                        <ul>
+                            <li><a href="">하이주얼리</a></li>
+                            <li><a href="">주얼리 컬렉션</a></li>
+                            <li><a href="">컬렉션&amp; 브라이덜</a></li>
+                            <li><a href="">웨딩주얼리</a></li>
+                            <li><a href="">특별한 솔리테어</a></li>
+                        </ul>
+                    </nav>
+                    <button class="hamburger mbtn hamburger--collapse" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                    <form action="javascript:formSubmit()" id="searchForm">
+                        <input type="text">
+                        <button>
+                            <i class="xi-search"></i>
+                        </button>
+                        <script>
+                            function formSubmit() {
+                                let inVar = document.querySelector('#searchForm input');
+                                console.log(inVar);
+                                if (inVar.value.length < 8) {
+                                    alert('말이짧다 콱씨');
+                                    inVar.value = '';
+                                    inVar.focus();
+                                }
+                            }
+                        </script>
+                    </form>
+                    <!-- 데이터베이스에서 검색하는 매개체? -->
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="main_visual">
+                <div class="main_slider">
+                    <figure class="itm01">
+                        <div class="container">
+                            <h3>01.JEWELLERY COLLECTION EVENT</h3>
+                            <p>모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다. </p>
+                            <a href="">more</a>
+                        </div>
+                    </figure>
+                    <figure class="itm02">
+                        <div class="container">
+                            <h3>02.JEWELLERY COLLECTION EVENT</h3>
+                            <p>모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다. </p>
+                            <a href="">more more more more</a>
+                        </div>
+                    </figure>
+                    <figure class="itm03">
+                        <div class="container">
+                            <h3>03.JEWELLERY COLLECTION EVENT</h3>
+                            <p>모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다. </p>
+                            <a href="">아무튼여러가지글자</a>
+                        </div>
+                    </figure>
+                </div>
+            </section>
+            <!-- 자습부분 -->
+            <section class="basic">
+                <h2>JEWELLERY COLLECTION EVENT</h2>
+                <p>모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다</p>
+                <div class="container">
+                    <figure>
+                        <div class="inbox">
+                            <img src="./img/lesedilarona01.jpg" alt="">
+                        </div>
+                        <strong>스톤 그리고 색상들의 멋진 조합</strong>
+                        <!-- 인라인태그는 마진,패딩 아래위로 안먹음 -->
+                        <a href="">more</a><!-- 인라인태그를 가져오는 이유-복잡하지않게 em,span안씀 -->
+                    </figure>
+                    <figure>
+                        <div class="inbox">
+                            <img src="./img/lesedilarona02.jpg" alt="">
+                        </div>
+
+                        <strong>스톤 그리고 색상들의 멋진 조합</strong>
+                        <a href="">thethethemore</a>
+                    </figure>
+                    <figure>
+                        <div class="inbox">
+                            <img src="./img/lesedilarona03.jpg" alt="">
+                        </div>
+                        <strong>스톤 그리고 색상들의 멋진 조합</strong>
+                        <a href="">more</a>
+                    </figure>
+                    <!-- <div style="clear:both"></div> -->
+                </div>
+            </section>
+
+            <!-- 자습부분 끝 -->
+
+
+            <section class="fixed_bg">
+                <h2>JEWELLERY COLLECTION EVENT</h2>
+                <p>모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다</p>
+                <span>more</span><i class="xi-arrow-right"></i>
+            </section>
+            <section class="movie">
+                <div class="container">
+                    <figure>
+                        <video src="./img/movie.mp4" muted autoplay loop playsinline></video>
+                        <!-- 모바일에서는 오토플레이가 안됨 -->
+                    </figure>
+                    <div class="dec">
+                        <h2>JEWELLERY COLLECTION EVENT</h2>
+                        <p>모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다</p>
+                        <i class="xi-play"></i>
+                        <i class="xi-pause"></i>
+                    </div>
+                </div>
+            </section>
+            <section class="utube">
+                <h2>JEWELLERY COLLECTION EVENT</h2>
+                <p>모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다</p>
+                <i class="xi-play"></i>
+                <i class="xi-pause"></i>
+                <div class="player" id="myMovie">
+                </div>
+            </section>
+            <section class="product_list">
+                <h2>JEWELLERY COLLECTION EVENT
+                    <small><span>NEW</span></small>
+                </h2>
+                <p>모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉션은 다양한 컷, 스톤 그리고 색상들을 멋진 조합으로 선사합니다</p>
+                <div class="product_slider">
+                    <figure>
+                        <div class="box">
+                            <img src="./img/lesedilarona01.jpg" alt="">
+                        </div>
+                        <strong>JEWELLERY</strong>
+                    </figure>
+                    <figure>
+                        <div class="box">
+                            <img src="./img/lesedilarona02.jpg" alt="">
+                        </div>
+                        <strong>JEWELLERY</strong>
+                    </figure>
+                    <figure>
+                        <div class="box">
+                            <img src="./img/lesedilarona03.jpg" alt="">
+                        </div>
+                        <strong>JEWELLERY</strong>
+                    </figure>
+                    <figure>
+                        <div class="box">
+                            <img src="./img/lesedilarona04.jpg" alt="">
+                        </div>
+                        <strong>JEWELLERY</strong>
+                    </figure>
+                    <figure>
+                        <div class="box">
+                            <img src="./img/lesedilarona05.jpg" alt="">
+                        </div>
+                        <strong>JEWELLERY</strong>
+                    </figure>
+                    <figure>
+                        <div class="box">
+                            <img src="./img/lesedilarona06.jpg" alt="">
+                        </div>
+                        <strong>JEWELLERY</strong>
+                    </figure>
+                </div>
+                <i class="xi-arrow-left s_left"></i>
+                <i class="xi-arrow-right s_right"></i>
+            </section>
+            <section class="tab">
+                <div class="container">
+                    <div class="tab_wrap">
+                        <ul class="tab_link">
+                            <li class="on">memu01</li>
+                            <li>memu02</li>
+                            <li>memu03</li>
+                        </ul>
+                        <ul class="tab_content">
+                            <li class="on">
+                                <dl>
+                                    <dd>
+                                        <strong>
+                                            모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉 모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프
+                                            하우스의 시그너쳐 컬렉</strong>
+                                        <span>2022.12.24</span>
+                                    </dd>
+                                    <dd>
+                                        <strong>
+                                            모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉 모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프
+                                            하우스의 시그너쳐 컬렉</strong>
+                                        <span>2022.12.24</span>
+                                    </dd>
+                                    <dd>
+                                        <strong>
+                                            모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉 모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프
+                                            하우스의 시그너쳐 컬렉</strong>
+                                        <span>2022.12.24</span>
+                                    </dd>
+                                    <dd>
+                                        <strong>
+                                            모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉 모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프
+                                            하우스의 시그너쳐 컬렉</strong>
+                                        <span>2022.12.24</span>
+                                    </dd>
+                                    <dd>
+                                        <strong>
+                                            모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프 하우스의 시그너쳐 컬렉 모던하면서도 클래식한 디자인들을 완벽하게 표현한 그라프
+                                            하우스의 시그너쳐 컬렉</strong>
+                                        <span>2022.12.24</span>
+                                    </dd>
+
+                                </dl>
+                            </li>
+                            <li>02</li>
+                            <li>03</li>
+                        </ul>
+                    </div>
+                    <figure>
+                        <img src="./img/mainvisual01.jpg" alt="">
+                    </figure>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer_top container">
+                <ul>
+                    <li><a href=""> 이용약관</a></li>
+                    <li><a href="">문의하기</a></li>
+                    <li><a href="">개인정보 취급방침</a></li>
+                    <li><a href="">방문 예약하기</a></li>
+                    <li><a href="">사이즈 가이드</a></li>
+                    <li><a href="">그라프 하우스 소개</a></li>
+                </ul>
+                <div class="sns">
+                    <a href="#!"><i class="xi-kakaotalk"></i></a>
+                    <a href=""><i class="xi-facebook"></i></a>
+                    <a href=""><i class="xi-naver"></i></a>
+                </div>
+            </div>
+            <hr>
+            <address class="footer_bottom container">
+                <div class="left">
+                    전화번호 :<a href="tel:010-6456-4960">010-6456-4960</a>
+                    <a href="mailto:allizzwell108@naver.com">e-mail:allizzwell108@naver.com</a>
+                    Graff France Headquarters 237 rue Saint-Honore Paris 75001
+                </div>
+                <div class="right">
+                    <select id="link">
+                        <option value="">Family link</option>
+                        <option value="http://naver.com">naver</option>
+                        <option value="http://daum.net">daum</option>
+                        <option value="http://google.com">google</option>
+                    </select>
+                    <!-- 문.select태그 사용하는목적 -->
+                </div>
+            </address>
+        </footer>
+    </div>
+    </div>
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

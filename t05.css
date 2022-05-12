@@ -1,0 +1,32 @@
+.line p::before{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: black;
+    vertical-align: middle;
+    margin: 15px 0;
+}
+.line p::after{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: black;
+    vertical-align: middle;
+    margin: 15px 0;
+}
+
+.line ul>li{
+    display: inline-block;
+}
+
+.line ul>li~li::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    background: #333;
+    margin: 0 15px;
+    vertical-align: middle;
+}

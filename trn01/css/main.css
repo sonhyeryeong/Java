@@ -1,204 +1,217 @@
-.container {
+.container{
     display: flex;
-    width: 1200;
+    width: 1200px;
     margin: 0 auto;
 }
 
-.we_a_logo .top_banner {
+
+
+.header .top_banner{
     border-bottom: 1px solid #ddd;
     line-height: 40px;
 }
-
-.we_a_logo .top_banner span {
-    margin: 0 0 0 auto;
+.header .top_banner span{
+    margin: 0 0 0 auto; 
 }
 
-.we_a_logo .top_banner a {
-    margin-left: 0 0 0 10px;
+.header .top_banner a {
+    margin-left:0 0 0 10px;
     padding: 0 10px;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
 }
-
-.we_a_logo .gnb {
+.header .gnb {
     margin: 0 0 0 auto;
 }
-
-.we_a_logo .gnb>ul {
-    display: flex;
-    gap: 30px;
-    line-height: 90px;
-    font-size: 19px;
-    font-weight: 500;
+.header .gnb>ul {
+   display: flex;
+   gap: 30px;
+   line-height: 90px;
+   font-size: 19px;
+   font-weight: 500;
 }
-
-.main_visual {
-    position: relative;
+.main_visual{
+    position: relative;/*슬로건의 기준점*/
     height: 600px;
-    background: url(../img/main_slider01.jpg) no-repeat center top/cover;
+    background: url(../img/main_slider01.jpg) no-repeat center top/cover;/*뒷배경되는 이미지 불러오기*/
 }
-
-.main_visual .slogan {
-    position: absolute;
+.main_visual .slogan{    
+    position: absolute;/*원하는 위치를 지정해 배치*/
     top: 100px;
     right: 600px;
-}
 
-.main_slider {
+}
+.main_slider{
     line-height: normal;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
     width: 1200px;
 }
-
-/* 슬라이더 위치 잡아줌 */
-.main_slider h3 {
+ /*top50% left50%가 기본공식 */
+.main_slider h3{
     font-size: 60px;
     font-weight: 900;
     margin: 0 0 30px 0;
-    background: linear-gradient(blue, skyblue);
-    color: transparent;
+    background: linear-gradient(blue,skyblue);
+    color:transparent;
     -webkit-background-clip: text;
+}/*글자 그라데이션*/
+   
 
-
-}
-
-.main_slider strong {
+.main_slider strong{
     display: block;
     margin: 0 0 20px 0;
     color: #fd7e14;
+
 }
 
-.main_slider .slick-dots {
-    padding: 30px 0 0 0;
-}
+.main_slider .slick-dots{
+   padding: 30px 0 0 0;}
 
-.main_slider .slick-dots li {
+.main_slider .slick-dots li{
     text-align: center;
-    display: inline-block;
+    display: inline-block; /*왼쪽에서 오른쪽으로*/
     margin: 0 10px 0 0;
     width: 80px;
     height: 4px;
     background: #333;
 }
-
-.main_slider .slick-dots li.slick-active {
+/*겹쳐있는것은포지션absolute  */
+.main_slider .slick-dots li.slick-active{
     background: #fd7e14;
 }
 
-.main_slider .slick-dots button {
+.main_slider .slick-dots button{
     display: none;
 }
 
-.main_banner {
+.main_banner{
     transform: translateY(-50%);
 }
-
-.main_banner .container {
-    height: 220px;
+.main_banner .container{
+    height:  220px;
     align-items: flex-end;
-}
+}/*크기를 먼저 키우기, flex-end로 밑을 끝점으로 맞춰줌*/
 
-.main_banner figure {
+.main_banner figure{
     display: flex;
     flex: 1;
     text-align: center;
     color: #fff;
-    justify-content: center;
+    justify-content: center; /*내용물을 가운데로-마진:0 auto도 */
     align-items: center;
     height: 200px;
     transition: 0.5s;
-}
+    }
 
-.main_banner figure:hover {
+.main_banner figure:hover{
     height: 220px;
-}
+}/*호버하면 되는 크기 정의 */
 
-.main_banner figure:nth-child(1) {
+
+/*flex는 */
+.main_banner figure:nth-child(1){
     background: #e7948f;
 }
-
-.main_banner figure:nth-child(2) {
+.main_banner figure:nth-child(2){
     background: #f3ca4f;
 }
-
-.main_banner figure:nth-child(3) {
+.main_banner figure:nth-child(3){
     background: #337688;
 }
-
-.main_banner figure:nth-child(4) {
+.main_banner figure:nth-child(4){
     background: #6fa376;
 }
-
-.main_banner figure a {
-    display: flex;
+.main_banner figure a{
+    display: flex; /*a는 박스가 아니기 때문에 디스플레이:블록으로 박스를 만들어 줌*/
     align-items: flex-end;
     justify-content: center;
     width: 100px;
     height: 120px;
-    font-size: 11px;
+    font-size: 13px;
 }
+.main_banner figure:nth-child(1) a{
+    background: url(../img/icon_set_w.png) no-repeat 0 0; /*a부분만 불러오기 때문*/
+    transition: 0.5s;
+    }
 
-.main_banner figure:nth-child(1) a {
-    background: url(../img/icon_set_w.png) no-repeat 0 0;
-}
+.main_banner figure:nth-child(1) :hover a{
+        background: url(../img/icon_set_w.png) no-repeat -300px 0;
+    }
 
-.main_banner figure:nth-child(2) a {
+
+.main_banner figure:nth-child(2) a{
     background: url(../img/icon_set_w.png) no-repeat -100px 0;
-}
-
-.main_banner figure:nth-child(3) a {
+}/*-100px왼쪽으로 a박스가 중심이기 때문에 a박스에 보이는 사진이 왼쪽으로 가서 두번째 그림이 보이는 것임*/
+.main_banner figure:nth-child(3) a{
     background: url(../img/icon_set_w.png) no-repeat -200px 0;
 }
-
-.main_banner figure:nth-child(4) a {
+.main_banner figure:nth-child(4) a{
     background: url(../img/icon_set_w.png) no-repeat -300px 0;
 }
 
-.main_banner .customer {
-    position: relative;
+
+.main_banner .customer{
+    position: relative; /*기준점0*/
     flex: 2;
     text-align: right;
     background: #dddddd;
     padding: 50px 30px 50px 0;
-}
+  
 
-.main_banner .customer a {
+}
+.main_banner .customer a{
     display: block;
     margin: 0 0 15px 0;
     font-size: 38px;
-    font-weight: 700;
-    background: linear-gradient(blue, skyblue);
-    color: transparent;
+    background:linear-gradient(blue,skyblue);
+    color:transparent;
     -webkit-background-clip: text;
+    font-weight: 700;
 }
-
-.main_banner .customer i {
-    position: absolute;
-    top: -30px;
-    right: 30px;
+.main_banner .customer i{
+    position: absolute;/*오른쪽아래*/
+    top: -29px;
+    right: 30px; /*값을 주는게 아니고 좌표인 거지*/
     color: #fff;
-    background: #e7948f;
+    background:#e7948f; 
     font-size: 38px;
     padding: 10px;
-    border-radius: 50%;
-    border: #333 solid 3px;
+    border-radius: 50%;/*동그랗게 만드는거*/
 }
+/*.main_link h2{
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+.main_link h2::after{
+    content: "";
+    display:inline-block; 
+    width: 80px;
+    height: 1px;
+    background: #f00;
+    vertical-align: middle;
+    margin: 0 10px;
+}*//*display:block으로 하면 글자를 밑으로 내림 인라인 블록은 텍스트 취급*/
 
-.main_link {
+.main_link{
     padding: 0 0 10px 0;
-    background: #e7948f;
-}
+    background: linear-gradient(to top, #f7f7f7 70%, transparent 30%);/*앞 색깔 숫자가 크면 경계선이 생긴다*/
 
-.main_link .container {
+}
+.main_link .container{
     gap: 30px;
 }
-
-.main_link figure {
-    position: relative;
+/* .main_link li::before{ 
+    content: "\ea10";
+    font-family: xeicon !important;
+}*/
+.main_link figure{
+    position: relative; /*more의 기준점*/
     flex: 1;
+    border-radius: 50px 0 0 0; /*박스를 구부린거임*/
+    overflow: hidden; /*박스 바깥으로 나온 그림을 감춰주는 것*/
 }
 
 .main_link figure a {
@@ -207,33 +220,32 @@
     right: 30px;
     width: 60px;
     height: 60px;
-    background: #f3ca4f;
+    background: rgba(243, 202, 79, 0.5);
     text-align: center;
     line-height: 60px;
     color: #fff;
     border-radius: 50%;
     text-transform: uppercase;
+    /*opacity: 0.5; 투명하게만듬-자식들도*/
 }
 
-
-.main_link figure a:hover {
-    background: #fd7e14;
+.main_link figure a:hover{
+    background:rgba(243, 202, 79, 1);
     border-radius: 5px;
 }
-
-.main_link img {
+.main_link img{    
     width: 100%;
     margin: 0 0 30px 0;
 }
 
 
-.main_link h3 {
-    font-size: 23px;
+.main_link h3{
+    font-size: 23px; /*노트상스폰트는 홀수 픽셀이 좋음*/
     margin: 0 0 30px 0;
 }
 
-.main_link h3::after {
-    content: "";
+.main_link h3::after{ /*디자인요소(컨텐츠)이므로 내용으로 안 읽힘-드래그해도 안 긁힘*/
+    content: ""; 
     display: block;
     width: 80px;
     height: 1px;
@@ -246,331 +258,340 @@
     padding: 50px 0;
     text-align: center;
 }
-
-.footer ul {
+.footer ul{
     margin: 10px 0;
 }
-
 .footer ul>li {
     display: inline-block;
-}
-
-.footer ul>li~li::before {
+}/*줄바꿈없이 나열하는 태그*/
+.footer ul>li~li::before{ 
     content: "";
     display: inline-block;
     width: 1px;
     height: 13px;
     background: #333;
     margin: 0 15px;
-    vertical-align: middle;
+    vertical-align: middle; /*세로축 중앙정렬*/
 }
 
-.footer address {
+.footer address{
     font-style: normal;
 }
 
 
+/* 
+아 어려워. 2022.05.04
+responsive 768
 
-/* 아래부터 반응형 */
+*/
 
 
 @media(max-width:768px) {
-
-
-
-
-    .container {
+    
+    .container{
         display: flex;
         flex-direction: column;
         width: auto;
         margin: 0 auto;
     }
+    
+    
 
-    .we_a_logo .top_banner {
+    .header .top_banner{
         display: none;
         border-bottom: 1px solid #ddd;
         line-height: 40px;
     }
-
-    .we_a_logo .top_banner span {
-        margin: 0 0 0 auto;
+    .header .top_banner span{
+        margin: 0 0 0 auto; 
     }
-
-    .we_a_logo .top_banner a {
-        margin-left: 0 0 0 10px;
+    
+    .header .top_banner a {
+        margin-left:0 0 0 10px;
         padding: 0 10px;
         border-left: 1px solid #ddd;
         border-right: 1px solid #ddd;
     }
-    .we_a_logo h1{padding: 0 15px;}
+    .header h1{
+        padding: 0 15px;
+    }
 
-    .we_a_logo .gnb {
+    .header .gnb {
         position: fixed;
-        top:0;
+        top: 0;
         left: -100%;
         background: #fff;
-        width: calc(100% -90px);
+        width: calc(100% - 90px);
         height: 100vh;
         margin: 0 0 0 auto;
-        border-right: 1px solid #ddd;
-        z-index: 999;
+        border-right: 1px solid #333;
+        z-index: 999; /*제일위로올리는것*/
         transition: 0.5s;
     }
-    .we_a_logo .gnb.on{
+    .header .gnb.on{
         left: 0;
-    }
-    .we_a_logo .gnb>ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        padding: 50px 15px;
-        line-height: 40px;
-        font-size: 19px;
-        font-weight: 500;
-    }
 
-    .we_a_logo .gnb a {
+    }
+    .header .gnb>ul {
+       display: flex;
+       flex-direction: column;
+       gap: 0;
+       padding: 50px 15px;
+       line-height: 40px;
+       font-size: 19px;
+       font-weight: 500;
+    }
+    .header .gnb>ul a {
         display: block;
         border-bottom: 1px solid #ddd;
     }
-
-
-
-    .main_visual {
-        position: relative;
-        height: calc(100vh -90px);
-        background: url(../img/main_slider01.jpg) no-repeat right top/cover;
+    .main_visual{
+        position: relative;/*슬로건의 기준점*/
+        height: calc(100vh - 90px);
+        background: url(../img/main_slider01.jpg) no-repeat right top/cover;/*뒷배경되는 이미지 불러오기*/
     }
-
-    .main_visual .slogan {
-        display: none;
-        position: absolute;
+    .main_visual .slogan{ 
+        display: none;   
+        position: absolute;/*원하는 위치를 지정해 배치*/
         top: 100px;
         right: 600px;
+    
     }
-
-    .main_slider {
+    .main_slider{
         position: absolute;
         top: auto;
         bottom: 150px;
-        left:0;
+        left: 0;
         transform: translate(0,0);
         width: 100%;
         padding: 0 30px;
         text-align: center;
     }
+     /*top50% left50%가 기본공식 */
 
-    /* 슬라이더 위치 잡아줌 */
-
-    .main_slider h3 {
-        font-size: 11vw;
+    .main_slider h3{
+        font-size: 11vw; /*vw는 가로 길이의 1%를 의미*/
         font-weight: 900;
         margin: 0 0 30px 0;
-        background: linear-gradient(blue, skyblue);
-        color: transparent;
+        background: linear-gradient(blue,skyblue);
+        color:transparent;
         -webkit-background-clip: text;
-    }
-
-    .main_slider item{
-        height: 500px;
-    }
-
-    .main_slider strong {
+    }/*글자 그라데이션*/
+    
+    .main_slider .itm{
+        height: 300px;
+        /*슬라이더 높이를 지정해줘서 글자가 안짤리게  */
+    }   
+    
+    .main_slider strong{
         display: block;
         margin: 0 0 20px 0;
         color: #fd7e14;
+    
     }
-
-    .main_slider .slick-dots {
+    
+    .main_slider .slick-dots{
         text-align: center;
         padding: 30px 0 0 0;
     }
-
-    .main_slider .slick-dots li {
-        display: inline-block;
+    
+    .main_slider .slick-dots li{
+        
+        display: inline-block; /*왼쪽에서 오른쪽으로*/
         margin: 0 5px 0 0;
         width: 10px;
         height: 10px;
         background: #333;
     }
-
-    .main_slider .slick-dots li.slick-active {
+    /*겹쳐있는것은포지션absolute  */
+    .main_slider .slick-dots li.slick-active{
         background: #fd7e14;
     }
-
-    .main_slider .slick-dots button {
+    
+    .main_slider .slick-dots button{
         display: none;
     }
-
-
-
-    .main_banner {
+    
+    .main_banner{
         transform: translateY(0);
     }
-
-    .main_banner .container {
-        display: flex;
+    .main_banner .container{
+        height:  auto;
+        align-items: stretch;
         flex-direction: row;
-        height: auto;
         flex-wrap: wrap;
-    }
-
-    .main_banner figure {
+    }/*중요함--stretch는 기본값으로, wrap은 줄바꿈 디렉션을 가로로 줬으니까 가로로 줄바꿈 되는것*/
+    
+    .main_banner figure{
         display: flex;
-        flex: 1 1 50%;
+        flex: 1 1 50%; /*검색하기*/
         text-align: center;
         color: #fff;
-        justify-content: center;
+        justify-content: center; /*내용물을 가운데로-마진:0 auto도 */
         align-items: center;
         height: 200px;
         transition: 0.5s;
-    }
-
-    .main_banner figure:hover {
+        }
+    
+    .main_banner figure:hover{
         height: 200px;
-    }
-
-    .main_banner figure:nth-child(1) {
+    }/*호버하면 되는 크기 정의 */
+    
+    
+    /*flex는 */
+    .main_banner figure:nth-child(1){
         background: #e7948f;
     }
-
-    .main_banner figure:nth-child(2) {
+    .main_banner figure:nth-child(2){
         background: #f3ca4f;
     }
-
-    .main_banner figure:nth-child(3) {
+    .main_banner figure:nth-child(3){
         background: #337688;
     }
-
-    .main_banner figure:nth-child(4) {
+    .main_banner figure:nth-child(4){
         background: #6fa376;
     }
-
-    .main_banner figure a {
-        display: flex;
+    .main_banner figure a{
+        display: flex; /*a는 박스가 아니기 때문에 디스플레이:블록으로 박스를 만들어 줌*/
         align-items: flex-end;
         justify-content: center;
         width: 100px;
         height: 120px;
-        font-size: 11px;
+        font-size: 13px;
     }
-
-    .main_banner figure:nth-child(1) a {
-        background: url(../img/icon_set_w.png) no-repeat 0 0;
-    }
-
-    .main_banner figure:nth-child(2) a {
+    .main_banner figure:nth-child(1) a{
+        background: url(../img/icon_set_w.png) no-repeat 0 0; /*a부분만 불러오기 때문*/
+        transition: 0.5s;
+        }
+    
+    .main_banner figure:nth-child(1) :hover a{
+            background: url(../img/icon_set_w.png) no-repeat -300px 0;
+        }
+    
+    
+    .main_banner figure:nth-child(2) a{
         background: url(../img/icon_set_w.png) no-repeat -100px 0;
-    }
-
-    .main_banner figure:nth-child(3) a {
+    }/*-100px왼쪽으로 a박스가 중심이기 때문에 a박스에 보이는 사진이 왼쪽으로 가서 두번째 그림이 보이는 것임*/
+    .main_banner figure:nth-child(3) a{
         background: url(../img/icon_set_w.png) no-repeat -200px 0;
     }
-
-    .main_banner figure:nth-child(4) a {
+    .main_banner figure:nth-child(4) a{
         background: url(../img/icon_set_w.png) no-repeat -300px 0;
     }
-
-    .main_banner .customer {
-        position: relative;
+    .main_banner figure strong{
+       
+    }
+    .main_banner .customer{
+        position: relative; /*기준점0*/
         flex: 2;
         text-align: right;
         background: #dddddd;
         padding: 50px 30px 50px 0;
+      
+    
     }
-
-    .main_banner .customer a {
+    .main_banner .customer a{
         display: block;
         margin: 0 0 15px 0;
         font-size: 38px;
-        font-weight: 700;
-        background: linear-gradient(blue, skyblue);
-        color: transparent;
+        background:linear-gradient(blue,skyblue);
+        color:transparent;
         -webkit-background-clip: text;
+        font-weight: 700;
     }
-
-    .main_banner .customer i {
-        position: absolute;
-        top: -30px;
-        right: 30px;
+    .main_banner .customer i{
+        position: absolute;/*오른쪽아래*/
+        top: -29px;
+        right: 30px; /*값을 주는게 아니고 좌표인 거지*/
         color: #fff;
-        background: #e7948f;
+        background:#e7948f; 
         font-size: 38px;
         padding: 10px;
-        border-radius: 50%;
-        border: #333 solid 3px;
+        border-radius: 50%;/*동그랗게 만드는거*/
     }
-
-    .main_link {
+    /*.main_link h2{
+        text-align: center;
+        margin: 0 0 50px 0;
+    }
+    .main_link h2::after{
+        content: "";
+        display:inline-block; 
+        width: 80px;
+        height: 1px;
+        background: #f00;
+        vertical-align: middle;
+        margin: 0 10px;
+    }*//*display:block으로 하면 글자를 밑으로 내림 인라인 블록은 텍스트 취급*/
+    
+    .main_link{
         padding: 0 0 10px 0;
-        background: #e7948f;
+        background: linear-gradient(to top, #f7f7f7 70%, transparent 30%);/*앞 색깔 숫자가 크면 경계선이 생긴다*/
+    
     }
-
-    .main_link .container {
+    .main_link .container{
         padding: 50px 15px;
         gap: 30px;
     }
-
-    .main_link figure {
-        position: relative;
+     /* .main_link li::before{ 
+        content: "\ea10";
+        font-family: xeicon !important;
+    }*/
+    .main_link figure{
+        position: relative; /*more의 기준점*/
         flex: 1;
+        border-radius: 50px 0 0 0; /*박스를 구부린거임*/
+        overflow: hidden; /*박스 바깥으로 나온 그림을 감춰주는 것*/
     }
-
     .main_link figure a {
         position: absolute;
         top: 200px;
         right: 30px;
         width: 60px;
         height: 60px;
-        background: #f3ca4f;
+        background: rgba(243, 202, 79, 0.5);
         text-align: center;
         line-height: 60px;
         color: #fff;
         border-radius: 50%;
         text-transform: uppercase;
+        /*opacity: 0.5; 투명하게만듬-자식들도*/
     }
-
-
-    .main_link figure a:hover {
-        background: #fd7e14;
+    .main_link figure a:hover{
+        background:rgba(243, 202, 79, 1);
         border-radius: 5px;
     }
-
-    .main_link img {
+    
+    .main_link img{
         width: 100%;
         margin: 0 0 30px 0;
     }
-
-
-    .main_link h3 {
-        font-size: 23px;
+    .main_link h3{
+        font-size: 23px; /*노트상스폰트는 홀수 픽셀이 좋음*/
         margin: 0 0 30px 0;
     }
-
-    .main_link h3::after {
-        content: "";
+    
+    .main_link h3::after{ /*디자인요소(컨텐츠)이므로 내용으로 안 읽힘-드래그해도 안 긁힘*/
+        content: ""; 
         display: block;
         width: 80px;
         height: 1px;
         background: #fd7e14;
         margin: 15px 0;
     }
-
+    
     .footer {
         border-top: 1px solid #ddd;
         padding: 50px 0;
         text-align: center;
     }
-
-    .footer ul {
+    .footer ul{
         margin: 10px 0;
     }
-
     .footer ul>li {
         display: inline-block;
-    }
-
-    .footer ul>li~li::before {
+        padding: 5px 15px;
+    }/*줄바꿈없이 나열하는 태그*/
+    .footer ul>li~li::before{ 
         content: "";
         display: none;
         width: 1px;
@@ -579,19 +600,20 @@
         margin: 0 15px;
         vertical-align: middle;
     }
-
-    .footer address {
+    
+    .footer address{
         font-style: normal;
     }
-    .molla {
+    .mopen{
         position: fixed;
         top: 30px;
         right: 30px;
         width: 30px;
         height: 30px;
         background: #ddd;
+
     }
-    .molla span{
+    .mopen span{
         position: absolute;
         top: 5px;
         left: 5px;
@@ -599,12 +621,17 @@
         height: 3px;
         background: #333;
     }
-
-    .molla span:nth-child(1){
+    .mopen span:nth-child(1){
         top: 5px;
     }
-    .molla span:nth-child(2){top: 12px;}
-    .molla span:nth-child(3){top: 12px;}
-    .molla span:nth-child(4){top: 20px;}
-
+    .mopen span:nth-child(2){
+        top: 12px;
+    }
+    .mopen span:nth-child(3){
+        top: 12px;
+    }
+    .mopen span:nth-child(4){
+        top: 20px;
+    }
 }
+
