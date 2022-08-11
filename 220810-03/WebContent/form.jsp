@@ -1,16 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri ="http://java.sun.com/jsp/jstl/core" prefix ="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>입력 폼</title>
 </head>
 <body>
-	<form action ="./param">
-		<input type ="text" name ="name"/>
-		<input type ="number" name="age"/>
-		<input type ="submit"/>
+	<form action="./addperson.do">
+		<input type="text" name="firstname" />
+		<input type="text" name="lastname" />
+		<input type="number" name="age" />
+		<input type="email" name="email" />
+		<input type="submit" />
+		<c:if test ="${not empty errors }">
+			<div>
+				<c:forEach var ="message" items ="${errors }">
+					<p>${message.value }</p>
+				</c:forEach>
+			</div>
+		</c:if>
 	</form>
 </body>
 </html>
