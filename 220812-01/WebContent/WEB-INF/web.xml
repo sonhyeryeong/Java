@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>220812-01</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <error-page><!-- 404에러가 발생할 경우, notfound로 갈 수 있게 셋팅 -->
+  	<error-code>404</error-code>
+  	<location>/notfound.jsp</location>
+  </error-page>
+  
+  <error-page><!--발생하는 예외 타입에 대해서도 에러페이지를 만들 수 있다.   -->
+  	<exception-type>java.lang.Exception</exception-type>
+  	<location>/errorhandle</location>
+  </error-page>
+</web-app>

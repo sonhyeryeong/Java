@@ -14,11 +14,17 @@ import person.Person;
 import person.PersonDAO;
 import person.PersonValidator;
 
+//addperson.do => get/post로 나눈다!!
 public class PersonServlet extends HttpServlet {
-
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		System.out.println(req.getCharacterEncoding()); 인코딩 기본 값은 null이다!!!
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.sendRedirect(req.getContextPath()+"/form.jsp");
+		
+	}
+
+	//service에 있던 내용을 이쪽으로 옮겼다!!!
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("utf-8");//보내기 전에 인코딩을 해준다. 
 		
 		
@@ -56,8 +62,8 @@ public class PersonServlet extends HttpServlet {
 			resp.sendRedirect(req.getContextPath()+"/list");
 			
 		}
-		
-		
 	}
+
 	
+
 }
