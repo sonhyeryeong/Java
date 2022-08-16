@@ -31,16 +31,20 @@ public class LoginServlet extends HttpServlet {
 				}
 			}
 		}
-		
+		// 로그인성공
 		if (password.equals("1234")) {
-			// 로그인성공
 			// 쿠키(아이디)를 담은 성공메세지 응답
 			if (rememberme != null && rememberme.equals("on")) {
 				Cookie c = new Cookie("rememberme", URLEncoder.encode(id, "utf-8"));
 				c.setMaxAge(60 * 60 * 24);
-
+				
 				resp.addCookie(c);
 			}
+			
+			//로그인이 성공했을 때 어떤 값을 설정해 보낸다!!
+			Cookie c2 = new Cookie("loginok","ok");
+			resp.addCookie(c2);
+			
 			req.getRequestDispatcher("ok.jsp").forward(req, resp);
 		} else {
 			// 로그인 실패

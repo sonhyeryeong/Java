@@ -10,10 +10,13 @@
 <body>
 	<%
 		Cookie[] cookies = request.getCookies();
-		for(Cookie c : cookies){
-			if(c.getName().equals("rememberme")){
-				request.setAttribute("idvalue", URLDecoder.decode(c.getValue(),"utf-8"));
+		if(cookies != null){
+			for(Cookie c : cookies){
+				if(c.getName().equals("rememberme")){
+					request.setAttribute("idvalue", URLDecoder.decode(c.getValue(),"utf-8"));
+				}
 			}
+			
 		}
 	%>
 	<form action = "./login" method ="post">
