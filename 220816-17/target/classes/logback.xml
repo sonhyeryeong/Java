@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    
+    <encoder>
+      <pattern>%date [%thread] %-5level %logger{36} - %msg%n</pattern><!--어떤 모양으로 출력할 지 정해준다. -->
+    </encoder>
+  </appender>
+  
+  <!-- 파일로 남기고 싶다! - logback에 들어가서 커스텀 하기 !! -->
+   <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+	    <file>d:/logs/logback.log</file><!-- 위치  -->
+	    <append>true</append><!-- 기존 파일에 이어 쓸 거야? -->
+	    <!-- set immediateFlush to false for much higher logging throughput -->
+	    <immediateFlush>true</immediateFlush>
+	    <!-- encoders are assigned the type
+	         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+	    <encoder>
+	      <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+	    </encoder>
+ 	</appender>
+  
+
+
+  <root level="debug"><!-- 어떤 레벨부터 출력을 할 것이냐? (제일 낮은 레벨부터 나온다:debug ) -->
+    <appender-ref ref="STDOUT" /><!--어떤 방식으로 출력할 것이냐? (콘솔 출력할래?) -->
+    <appender-ref ref="FILE"/>
+  </root>
+</configuration>
